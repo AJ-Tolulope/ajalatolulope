@@ -1,0 +1,106 @@
+/* ----------------
+hero section
+----------------- */
+.hero-section {
+  position: relative;
+  height: auto;
+  min-height: fit-content;
+}
+.hero-section .full-screen {
+  padding-block: 100px;
+}
+.hero-section .hero-text a {
+  box-shadow: var(--outer-shadow);
+}
+.hero-section .hero-text,
+.hero-section .hero-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.hero-section .hero-text h1 {
+  margin: 0 0 20px;
+  padding: 5px 0;
+  line-height: 1.2;
+}
+.hero-section .hero-text p {
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+.hero-section .hero-text h3 {
+  text-transform: uppercase;
+  margin: 0;
+}
+.hero-section .hero-text h4 {
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+.hero-section .hero-text .typing-text {
+  font-size: 14px;
+}
+
+.hero-section .hero-text .btn {
+  margin-top: 5px;
+}
+.hero-section .hero-img .img-box {
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  backdrop-filter: var(--blur);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  position: relative;
+}
+.hero-section .hero-img .img-box .quotes {
+  position: absolute;
+  width: 180px;
+  height: fit-content;
+  top: -10px;
+  right: -30px;
+  padding: 1rem;
+  background-color: var(--bg-opacity);
+  backdrop-filter: var(--blur);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  z-index: 1;
+}
+.hero-section .hero-img .img-box .quotes p {
+  font-size: 10px;
+}
+.hero-section .hero-img .img-box img {
+  width: 100%;
+  box-shadow: var(--outer-shadow);
+  box-shadow: 10px solid transparent;
+  border-radius: var(--border-radius);
+}
+/* -------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .hero-section .row {
+    gap: 3rem;
+  }
+  .hero-section .justify-content-between {
+    justify-content: center;
+  }
+  .hero-section .hero-text {
+    text-align: center;
+    margin: 0 auto;
+    order: 2;
+  }
+  .hero-section .home-img .img-box {
+    padding: 8px;
+    max-width: 330px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section .home-img .img-box {
+    padding: 0;
+    max-width: 300px;
+  }
+
+  .hero-section .hero-text h1 {
+    font-size: 38px;
+  }
+}

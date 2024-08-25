@@ -1,0 +1,95 @@
+/* ---------------------
+contact-section
+---------------------- */
+
+.contact-section {
+  position: relative;
+}
+.contact-section .contact-item {
+  display: flex;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+}
+.contact-section .contact-item-inner {
+  padding: 30px 15px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  width: 100%;
+  box-shadow: var(--outer-shadow);
+  border: var(--border);
+  position: relative;
+  backdrop-filter: var(--blur);
+}
+.contact-section .contact-item-inner i {
+  font-size: 25px;
+  color: var(--main-color);
+}
+.contact-section .contact-item-inner span {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-black-900);
+  margin: 15px 10px;
+  text-transform: capitalize;
+}
+.contact-section .contact-item-inner p {
+  font-size: 14px;
+  margin: 0;
+  word-wrap: break-word;
+}
+.contact-section .contact-form {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+.contact-section .w-50 {
+  padding: 0 15px;
+  flex: 0 50%;
+  max-width: 50%;
+}
+.contact-section .input-group {
+  margin: 0 0 25px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+.contact-section .input-group:after {
+  border-radius: var(--border-radius);
+}
+.contact-section .input-group .input-control {
+  height: 45px;
+  display: block;
+  width: 100%;
+  box-shadow: none;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 0 15px;
+  color: var(--text-black-700);
+  outline: none;
+  transition: var(--transition);
+  backdrop-filter: var(--blur);
+}
+.contact-section .input-group .input-control:focus {
+  border-bottom-color: var(--main-color);
+}
+.contact-section .input-group textarea.input-control {
+  height: 184px;
+  padding: 15px;
+  resize: none;
+}
+.contact-section .submit-btn {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: right;
+  padding: 0 15px;
+}
+.contact-section .submit-btn button {
+  backdrop-filter: var(--blur);
+}
+.contact-section .contact-form .input-group {
+  box-shadow: var(--outer-shadow);
+  border: var(--border);
+}
+/* --------------------------------------------- */

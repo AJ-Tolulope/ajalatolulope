@@ -1,0 +1,99 @@
+/* ------------------------------
+testimonial-section 
+------------------------------- */
+.testimonial-section {
+  position: relative;
+}
+.testimonial-section .testi-box {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.testimonial-section .testi-slider {
+  border-radius: var(--border-radius);
+  box-shadow: var(--outer-shadow);
+  border: var(--border);
+  /* display: grid;
+    place-content: center; */
+}
+.testimonial-section .testi-slider-container {
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.testimonial-section .testi-item {
+  padding: 60px 30px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -40px;
+  border-radius: var(--border-radius);
+  backdrop-filter: var(--blur);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.testimonial-section .testi-item.active {
+  margin-top: 0px;
+  opacity: 1;
+  transition: 0.4s ease;
+  transition-delay: 0.4s;
+}
+.testimonial-section .testi-item i {
+  position: absolute;
+  font-size: 30px;
+  color: var(--text-black-600);
+}
+.testimonial-section .testi-item i.left {
+  left: 5px;
+  top: 5px;
+}
+.testimonial-section .testi-item i.right {
+  right: 5px;
+  bottom: 5px;
+}
+.testimonial-section .testi-item p {
+  font-size: 14px;
+  margin: 0 0 30px;
+}
+.testimonial-section .testi-item img {
+  max-width: 70px;
+  max-height: 70px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 50%;
+}
+.testimonial-section .testi-item span {
+  margin: 10px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-black-700);
+  text-transform: capitalizes;
+}
+.testimonial-section .testi-slider-nav {
+  margin-top: 30px;
+  text-align: center;
+}
+.testimonial-section .testi-slider-nav span {
+  height: 40px;
+  width: 40px;
+  color: var(--main-color);
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 50%;
+  margin: 0 40px;
+  border: var(--border);
+}
+.testimonial-section .testi-slider-nav span i {
+  line-height: 40px;
+}
+.testimonial-section .testi-slider-nav span:hover {
+  background-color: var(--bg-opacity);
+}
+/* ------------------------------------ */
