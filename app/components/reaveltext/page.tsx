@@ -6,7 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const RevealText = ({ text }: {text: string}) => {
+type Text = {
+  text: string;
+}
+
+const RevealText = ({ text }: Text) => {
   useEffect(() => {
     const revealTexts = document.querySelectorAll(".reveal-text");
 
