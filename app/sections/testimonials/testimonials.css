@@ -13,8 +13,6 @@ testimonial-section
   border-radius: var(--border-radius);
   box-shadow: var(--outer-shadow);
   border: var(--border);
-  /* display: grid;
-    place-content: center; */
 }
 .testimonial-section .testi-slider-container {
   align-items: center;

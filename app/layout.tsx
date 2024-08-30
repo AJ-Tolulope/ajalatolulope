@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "./components/header/page";
 import Navigation from "./components/navigation/page";
 import Footer from "./components/footer/page";
@@ -21,10 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        />
       </head>
       <body className={inter.className}>
-        <div className="preloader">
+        {/* <div className="preloader">
           <div className="banter-loader">
             <div className="banter-loader__box"></div>
             <div className="banter-loader__box"></div>
@@ -50,7 +55,7 @@ export default function RootLayout({
           </span>
         </div>
 
-        <div className="mousemove" id="mousemove"></div>
+        <div className="mousemove" id="mousemove"></div> */}
 
         <Header />
 

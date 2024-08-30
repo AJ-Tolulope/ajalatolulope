@@ -14,11 +14,10 @@ function PortfolioSection() {
   return (
     <section className="portfolio-section section" id="portfolio">
       <div className="container">
-        <div className="row">
           <div className="section-title">
-            <h2 data-heading="portfolio">latest work</h2>
+            <h2 data-heading="{ portfolio }">latest work</h2>
           </div>
-        </div>
+        
 
         {/* <!-- portfolio filter start --> */}
         <div className="portfolio-filter">
@@ -35,15 +34,16 @@ function PortfolioSection() {
 
         {/* <!-- portfolio items start --> */}
         <div className="row portfolio-items">
-          {portfolio.map((portfolio) => {
+          {portfolio ? (
+          portfolio.map((portfolio) => {
             return (
               <Link href={`/pages/portfolio/${portfolio.id}` } key={portfolio.description.paragraph} className="portfolio-item" >
                 <div className="portfolio-item-inner">
                   <div className="portfolio-item-img">
                     <Image
                       src={portfolio.imageSrc[0]}
-                      width={800}
-                      height={800}
+                      width={1000}
+                      height={1000}
                       alt={portfolio.category}
                     />
 
@@ -55,7 +55,12 @@ function PortfolioSection() {
                 </div>
               </Link>
             );
-          })}
+          })
+          ) : (
+              <p style={{textAlign: 'center'}}>No projecct done on {portfolioItems}</p>
+            )
+
+          }
         </div>
         {/* <!-- portfolio items end --> */}
 

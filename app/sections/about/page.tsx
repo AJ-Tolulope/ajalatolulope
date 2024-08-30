@@ -5,21 +5,23 @@ import Link from "next/link";
 import Image from "next/image";
 import "./about.css";
 import Effects from "@/app/components/effects/page";
-import RevealText from "@/app/components/reaveltext/page";
+import RevealText from "@/app/components/revealtext/page";
 import { textData } from "@/app/contents/data";
 
 function AboutSection() {
   const [tabs, setTab] = useState("education");
+
+  const { about } = textData;
+
   return (
     <section className="about-section section" id="about">
       <Effects />
 
       <div className="container">
-        <div className="row">
           <div className="section-title">
-            <h2 data-heading="main info"> a little about me </h2>
+            <h2 data-heading="{ main info }"> a little about me </h2>
           </div>
-        </div>
+        
         <div className="row">
           <div className="about-img">
             <div className="img-box" data-aos="fade-up" data-aos-delay="300">
@@ -27,7 +29,7 @@ function AboutSection() {
                 src="/assets/proud_coder.svg"
                 width={800}
                 height={300}
-                alt=""
+                alt="Proud Coder"
               />
             </div>
 
@@ -47,24 +49,20 @@ function AboutSection() {
             </div>
           </div>
           <div className="about-info">
-            <RevealText text={textData.about.main} />
+            <RevealText text={about.main} />
           </div>
         </div>
 
         <div className="row">
           <div className="about-tabs">
             <span
-              className="tab-item active"
-              onClick={() => {
-                setTab("education");
-              }}>
+              className={`tab-item ${tabs === "education" ? "active" : ""}`}
+              onClick={() => setTab("education")}>
               education
             </span>
             <span
-              className="tab-item"
-              onClick={() => {
-                setTab("tools");
-              }}>
+              className={`tab-item ${tabs === "tools" ? "active" : ""}`}
+              onClick={() => setTab("tools")}>
               tools
             </span>
           </div>
@@ -78,17 +76,16 @@ function AboutSection() {
             <div className="row">
               <div className="timeline">
                 <div className="row">
-                  {textData.about.education.map((education) => {
-                    return (
-                      <div key={education.p} className="timeline-item">
+                  {about.education.map((education, index) => (
+                    <div key={index} className="timeline-item">
                       <div className="timeline-item-inner">
                         <i className="fas fa-graduation-cap icon"></i>
                         <h3>{education.h}</h3>
                         <h4>thewebedits</h4>
-                        <RevealText text={education.p } />
+                        <RevealText text={education.p} />
                       </div>
-                    </div>)
-                  })}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -101,18 +98,16 @@ function AboutSection() {
             <div className="row">
               <div className="timeline">
                 <div className="row">
-                  {textData.about.tools.map((tools) => {
-                    return (
-                      <div key={tools.p} className="timeline-item">
-                        <div className="timeline-item-inner">
-                          <i className="fas fa-briefcase icon"></i>
-                          <h3>{tools.h}</h3>
-                          <h4>thewebedits</h4>
-                          <RevealText text={tools.p} />
-                        </div>
+                  {about.tools.map((tools, index) => (
+                    <div key={index} className="timeline-item">
+                      <div className="timeline-item-inner">
+                        <i className="fas fa-briefcase icon"></i>
+                        <h3>{tools.h}</h3>
+                        <h4>thewebedits</h4>
+                        <RevealText text={tools.p} />
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

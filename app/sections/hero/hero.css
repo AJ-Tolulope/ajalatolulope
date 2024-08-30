@@ -5,9 +5,13 @@ hero section
   position: relative;
   height: auto;
   min-height: fit-content;
+  padding-block: var(--spacing-2x);
 }
 .hero-section .full-screen {
-  padding-block: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 70px;
+  align-items: center;
 }
 .hero-section .hero-text a {
   box-shadow: var(--outer-shadow);
@@ -80,7 +84,7 @@ hero section
   .hero-section .row {
     gap: 3rem;
   }
-  .hero-section .justify-content-between {
+  .hero-section .row {
     justify-content: center;
   }
   .hero-section .hero-text {

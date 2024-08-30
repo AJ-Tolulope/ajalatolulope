@@ -22,9 +22,6 @@ function Header() {
               </li>
             </ul>
           </div>
-          <div className="theme">
-            <i className="fas fa-moon"></i>
-          </div>
           <div className="menu-btn">
             <span></span>
             <span></span>

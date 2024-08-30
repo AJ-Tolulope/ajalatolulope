@@ -1,98 +1,92 @@
 "use client";
 
-import React, { useState } from "react";
-import { usePathname } from "next/navigation";
+import React from "react";
 import Image from "next/image";
 import { portfolioData } from "@/app/contents/data";
 import "./portfolio.css";
 
-function PortfolioPage() {
-  const pathname = usePathname();
+type Params = {
+  params: { id: string };
+};
 
-  const id = pathname.split("/")[-1];
+function PortfolioPage({ params }: Params) {
+  const id = params.id;
 
   const portfolio = portfolioData.portfolio.filter(
     (prop) => prop.id.toString() === id
   )[0];
 
-  const [imageCount, setImageCount] = useState(0);
-  const maxImageCount = portfolio ? portfolio?.imageSrc.length : 0;
-
-  // Increment image count
-  const incrementImageCount = () => {
-    setImageCount((prevCount) =>
-      prevCount < maxImageCount - 1 ? prevCount + 1 : 0
-    );
-  };
-
-  // Decrement image count
-  const decrementImageCount = () => {
-    setImageCount((prevCount) =>
-      prevCount > 0 ? prevCount - 1 : maxImageCount - 1
-    );
-  };
 
   // Handle undefined portfolio scenario
-  portfolio ? (
+  return (
     <section className="portfolio-popup">
-      <div className="pp-details">
+      <div className="container">
+        <div className="page-directory">
+          <p>home {'>'} portfolio {'>'} category</p>
+        </div>
+        <div className="pp-details">
         <div className="pp-details-inner">
           <div className="pp-title">
-            {/* <h2>{portfolio?.description.title}</h2> Dynamic title */}
+            {/* // Dynamic title */}
+            <h2>{portfolio.description.title}</h2>
             <p>
               Category -{" "}
-              <span className="pp-project-category">{portfolio?.category}</span>
+              <span className="pp-project-category">{portfolio.category}</span>
             </p>
           </div>
-          <div className="pp-project-details"></div>
+          <div className="pp-project-details">
+            <div className="row">
+              <div className="description">
+                <h4>Project Brief:</h4>
+                <p>{portfolio.description.paragraph}</p>
+              </div>
+              <div className="info">
+                <h4>Project Info</h4>
+                <ul>
+                  <li>
+                    Date - <span>{portfolio.description.year}</span>
+                  </li>
+                  <li>
+                    Client - <span>{portfolio.description.client}</span>
+                  </li>
+                  <li>
+                    Tools - <span>{portfolio.description.tools}</span>
+                  </li>
+                  <li>
+                    Web -{" "}
+                    <span>
+                      <a href={portfolio.description.web}>
+                        {portfolio.description.web}
+                      </a>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="separator"></div>
 
       <div className="pp-main">
         <div className="pp-main-inner">
-          <div className="pp-project-details-btn">
-            Project Details
-            <i className="fas fa-plus"></i>
-          </div>
-          <div className="pp-close">
-            <i className="fas fa-times"></i>
-          </div>
-          <Image
-            src={portfolio?.imageSrc[imageCount]}
-            width={800}
-            height={800}
-            alt={portfolio?.category}
-            className="pp-img"
-          />
-          <p>
-            Screenshots{" "}
-            <span className="pp-counter">{`${
-              imageCount + 1
-            } / ${maxImageCount}`}</span>
-          </p>
-        </div>
-
-        {/* <!-- pp navigation --> */}
-        <div className="pp-prev" onClick={decrementImageCount}>
-          <i className="fas fa-play"></i>
-        </div>
-        <div className="pp-next" onClick={incrementImageCount}>
-          <i className="fas fa-play"></i>
+          {portfolio.imageSrc.map((img) => {
+            
+            return (
+              <Image
+                key={img}
+                src={img}
+                width={1000}
+                height={1000}
+                alt={"portfolio image"}
+                className="pp-img"
+              />
+            );
+          })}
         </div>
       </div>
-    </section>
-  ) : (
-    <section className="notfound">
-      <div className="container">
-        <p>Portfolio not found</p>
       </div>
     </section>
   );
-  
-
-  
 }
 
 export default PortfolioPage;

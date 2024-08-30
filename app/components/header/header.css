@@ -19,16 +19,6 @@ header
   backdrop-filter: var(--blur);
 }
 
-.header .theme {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-content: center;
-  border: var(--border);
-  border-radius: 50%;
-  color: var(--text-black-900);
-  cursor: pointer;
-}
 /* -------------------------- */
 
 /* --------------
@@ -121,6 +111,9 @@ menu btn
 
 
 @media screen and (max-width: 768px) {
+  .header{
+    width: 80%;
+  }
   .header .menu-btn {
     display: flex;
   }

@@ -12,7 +12,7 @@ function ContactSection() {
       <div className="container">
         <div className="row">
           <div className="section-title">
-            <h2 data-heading="contact">Get In Touch</h2>
+            <h2 data-heading="{ contact }">Get In Touch</h2>
           </div>
         </div>
         <div className="row">

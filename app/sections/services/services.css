@@ -5,7 +5,9 @@ service-section
   position: relative;
 }
 .service-section .service-items {
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing);
   margin-bottom: 80px;
 }
 .service-section .service-item .service-item-inner {
@@ -48,3 +50,9 @@ service-section
   text-transform: capitalize;
 }
 /* ------------------------------------ */
+
+@media screen and (max-width: 786px) {
+  .service-section .service-items {
+    grid-template-columns: 1fr;
+  }
+}

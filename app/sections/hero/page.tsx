@@ -52,13 +52,11 @@ function HeroSection() {
     <section className="hero-section section" id="hero">
       <Effects />
       <div className="container">
-        <div className="row full-screen justify-content-between align-items">
-          <div className="hero-text" data-aos="fade-up" data-aos-delay="300">
-            <p>Welcome to thewebedits</p>
+        <div className="row full-screen">
+          <div className="hero-text" data-aos="zoom-in" data-aos-delay="300">
+            <p>{"Hi! my name's Ajala Tolulope"}</p>
             {/* <p className="typing-text">{typeText}</p> */}
-            <h1>
-              Where You Get Your <span>Website</span> Creatively Designed
-            </h1>
+            <h1>{`I'm a <span>frontend</span> developer`}</h1>
             <Link href="#portfolio" className="btn">
               View Projects
             </Link>
@@ -71,9 +69,7 @@ function HeroSection() {
                 height={300}
                 alt="profile-pic"
               />
-              <div className="quotes">
-                {/* <p>{quoteText}</p> */}
-              </div>
+              <div className="quotes">{/* <p>{quoteText}</p> */}</div>
             </div>
           </div>
         </div>

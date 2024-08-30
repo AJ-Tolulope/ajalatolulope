@@ -130,12 +130,12 @@ export const portfolioData: PortfolioData = {
   portfolio: [
     {
       id: 645875238875,
-      category: "landing-page",
+      category: "landing page",
       imageSrc: [
         "/assets/projects/project-7/1.png",
-        "assets/projects/project-7/2.png",
-        "assets/projects/project-7/3.png",
-        "assets/projects/project-7/4.png",
+        "/assets/projects/project-7/2.png",
+        "/assets/projects/project-7/3.png",
+        "/assets/projects/project-7/4.png",
       ],
       description: {
         title: "agency website",
@@ -149,12 +149,12 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: 86284666289,
-      category: "landing-page",
+      category: "landing page",
       imageSrc: [
         "/assets/projects/project-8/1.png",
-        "assets/projects/project-8/2.png",
-        "assets/projects/project-8/3.png",
-        "assets/projects/project-8/4.png",
+        "/assets/projects/project-8/2.png",
+        "/assets/projects/project-8/3.png",
+        "/assets/projects/project-8/4.png",
       ],
       description: {
         title: "furniture business landing page",
@@ -168,13 +168,13 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: 8276294763,
-      category: "landing-page",
+      category: "landing page",
       imageSrc: [
         "/assets/projects/project-9/1.png",
-        "assets/projects/project-9/2.png",
-        "assets/projects/project-9/3.png",
-        "assets/projects/project-9/4.png",
-        "assets/projects/project-9/5.png",
+        "/assets/projects/project-9/2.png",
+        "/assets/projects/project-9/3.png",
+        "/assets/projects/project-9/4.png",
+        "/assets/projects/project-9/5.png",
       ],
       description: {
         title: "real estate landing page",
@@ -187,14 +187,14 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: 647348289374,
-      category: "landing-page",
+      category: "landing page",
       imageSrc: [
         "/assets/projects/project-1/1.png",
-        "assets/projects/project-1/2.png",
-        "assets/projects/project-1/3.png",
-        "assets/projects/project-1/4.png",
-        "assets/projects/project-1/5.png",
-        "assets/projects/project-1/6.png",
+        "/assets/projects/project-1/2.png",
+        "/assets/projects/project-1/3.png",
+        "/assets/projects/project-1/4.png",
+        "/assets/projects/project-1/5.png",
+        "/assets/projects/project-1/6.png",
       ],
       description: {
         title: "landing page",
@@ -208,14 +208,14 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: 1224647253,
-      category: "web-app",
+      category: "web app",
       imageSrc: [
         "/assets/projects/project-2/1.png",
-        "assets/projects/project-2/2.png",
-        "assets/projects/project-2/3.png",
-        "assets/projects/project-2/4.png",
-        "assets/projects/project-2/5.png",
-        "assets/projects/project-2/6.png",
+        "/assets/projects/project-2/2.png",
+        "/assets/projects/project-2/3.png",
+        "/assets/projects/project-2/4.png",
+        "/assets/projects/project-2/5.png",
+        "/assets/projects/project-2/6.png",
       ],
       description: {
         title: "web app",
@@ -232,9 +232,9 @@ export const portfolioData: PortfolioData = {
       category: "blog",
       imageSrc: [
         "/assets/projects/project-3/1.png",
-        "assets/projects/project-3/2.png",
-        "assets/projects/project-3/3.png",
-        "assets/projects/project-3/4.png",
+        "/assets/projects/project-3/2.png",
+        "/assets/projects/project-3/3.png",
+        "/assets/projects/project-3/4.png",
       ],
       description: {
         title: "blog site",

@@ -13,22 +13,6 @@ effect
   z-index: -1;
 }
 .effect-1 {
-  width: 30px;
-  height: 30px;
-  box-shadow: 4px solid #0000dd;
-  right: 10%;
-  bottom: 20%;
-  animation: spin 10s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.effect-2 {
   left: 3%;
   bottom: 15%;
   width: 40px;
@@ -46,23 +30,11 @@ effect
     transform: translateY(25px);
   }
 }
-.effect-2 div {
+.effect-1 div {
   width: 3px;
   height: 3px;
   background-color: #ff8c00;
   margin: 0 3px 8px;
-}
-
-.effect-3 {
-  height: 220px;
-  width: 220px;
-  box-shadow: 20px solid var(--main-color);
-  border-radius: 5%;
-  top: 10%;
-  right: 0%;
-  transform: translateX(50%) rotate(45deg);
-  animation: bounceLeft 3s infinite ease-in-out;
-  opacity: 0.2;
 }
 @keyframes bounceLeft {
   0%,
@@ -73,23 +45,7 @@ effect
     transform: translateX(55%) rotate(45deg);
   }
 }
-.effect-4 {
-  border-top: 30px solid transparent;
-  border-left: 30px solid #06d79c;
-  left: 30%;
-  top: 20%;
-  animation: spin 15s linear infinite;
-}
-.effect-4:before {
-  content: "";
-  border-top: 30px solid transparent;
-  border-left: 30px solid #06d700;
-  position: absolute;
-  left: -35px;
-  top: -25px;
-  opacity: 0.5;
-}
-.effect-5 {
+.effect-2 {
   height: 50px;
   width: 50px;
   right: 5%;
@@ -100,17 +56,14 @@ effect
   overflow: hidden;
   animation: spin 10s linear infinite;
 }
-.effect-5 div {
+.effect-2 div {
   width: 1px;
   background-color: #4dd0e1;
 }
 
 
-@media screen and (max-width:68px) {
-  .effect-4 {
-    left: 5%;
-  }
-  .effect-5 {
+@media screen and (max-width:768px) {
+  .effect-2 {
     top: 50%;
     right: 60%;
   }
